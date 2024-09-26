@@ -48,8 +48,8 @@
 #### Errors
 - "SQLSTATE[HY000] [1044] Access denied for user '[user being denied access]'@'localhost' to database '[database user is denied access to]'..."
     - Likely fix is to locally use root user to grant permissions to the user being denied access using the following command
-          - `GRANT ALL PRIVILEGES ON [db name].* TO '[username]'@'localhost';`
-          - Note: Only do this for local development & QA testing
+        - `GRANT ALL PRIVILEGES ON [db name].* TO '[username]'@'localhost';`
+        - Note: Only do this for local development & QA testing
 - "SQLSTATE[HY000] [2002] Connection refused (Connection: mysql, SQL..."
     - If the connection string username and password are correct, check in MySQL if the user's authentication is set to the default of the auth_socket plugin
     - If it is, change it to mysql_native_password
